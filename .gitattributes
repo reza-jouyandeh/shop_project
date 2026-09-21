@@ -1,0 +1,13 @@
+statics/car/** linguist-vendored
+statics/acca/** linguist-vendored
+statics/fonts/** linguist-vendored
+statics/pdf/** linguist-vendored
+media/** linguist-vendored
+
+* text=auto eol=lf
+*.ttf binary
+*.jpg binary
+*.png binary
+*.webp binary
+*.gif binary
+*.pdf binary

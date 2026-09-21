@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ورود | فروشگاه کتاب</title>
+    <link rel="stylesheet" href="{% static "acca/style.css" %}" type="text/css">
+</head>
+<body>
+    <div class="container">
+        <div class="container__form container--signin" style="position: static; width: 100%;">
+            <form method="post" action="" class="form">
+                {% csrf_token %}
+                <h2 class="form__title">ورود</h2>
+
+                {% if errors %}
+                    {% for item in errors %}
+                        <p class="text text-danger bg-white rounded mb-2">{{ item }}</p>
+                    {% endfor %}
+                {% endif %}
+
+                <label style="width: 100%;">
+                    <input type="text" name="username" placeholder="ایمیل" class="input" required />
+                    <input type="password" name="password" placeholder="گذرواژه" class="input" required />
+                </label>
+                <button class="btn">ورود</button>
+                <a href="{% url 'account:user_register' %}" class="link">حساب کاربری ندارید؟ ثبت‌نام کنید</a>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

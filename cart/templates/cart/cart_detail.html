@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+<div class="breadcrumb">
+    <a href="{% url 'home:home' %}">خانه</a>
+    <i class="fas fa-chevron-left"></i>
+    <span>سبد خرید</span>
+</div>
+
+<section class="cart-page">
+
+    <h1 class="heading"> <span>سبد خرید</span> </h1>
+
+    {% if cart|length > 0 %}
+
+        <div class="cart-items">
+            {% for item in cart %}
+                <div class="cart-item">
+                    <div class="image">
+                        <img src="{{ item.product.image.url }}" alt="{{ item.product.title }}">
+                    </div>
+
+                    <div class="details">
+                        <h3>{{ item.product.title }}</h3>
+                        <div class="unit-price">{{ item.price }} تومان</div>
+                    </div>
+
+                    <form action="{% url 'cart:cart_update' item.product.id %}" method="post" class="update-form">
+                        {% csrf_token %}
+                        <input type="number" name="quantity" value="{{ item.quantity }}" min="1">
+                        <button type="submit" class="btn small">بروزرسانی</button>
+                    </form>
+
+                    <div class="item-total">{{ item.total_price }} تومان</div>
+
+                    <form action="{% url 'cart:cart_remove' item.product.id %}" method="post" class="remove-form">
+                        {% csrf_token %}
+                        <button type="submit" title="حذف"><i class="fas fa-trash"></i></button>
+                    </form>
+                </div>
+            {% endfor %}
+        </div>
+
+        <div class="cart-summary">
+            <div class="total-price">
+                <strong>مبلغ قابل پرداخت:</strong>
+                <span>{{ cart.get_total_price }} تومان</span>
+            </div>
+
+            {% if request.user.is_authenticated %}
+                <form action="{% url 'cart:checkout' %}" method="post">
+                    {% csrf_token %}
+                    <button type="submit" class="btn">ادامه و پرداخت با زرین‌پال</button>
+                </form>
+            {% else %}
+                <a href="{% url 'account:user_login' %}" class="btn">برای پرداخت ابتدا وارد شوید</a>
+            {% endif %}
+        </div>
+
+    {% else %}
+
+        <div class="empty-state">
+            <i class="fas fa-shopping-cart"></i>
+            <h1>سبد خرید شما خالی است</h1>
+            <p>هنوز محصولی به سبد خرید خود اضافه نکرده‌اید.</p>
+            <a href="{% url 'home:home' %}#featured" class="btn">مشاهده کتاب‌ها</a>
+        </div>
+
+    {% endif %}
+
+</section>
+
+{% endblock %}

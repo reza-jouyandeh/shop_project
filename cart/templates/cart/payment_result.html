@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block main %}
+
+<section class="empty-state">
+    {% if success %}
+        <i class="fas fa-check-circle" style="color:var(--green);"></i>
+        <h1>پرداخت با موفقیت انجام شد</h1>
+        <p>شماره پیگیری: {{ order.ref_id }}</p>
+        <p>شماره سفارش: {{ order.pk }}</p>
+    {% else %}
+        <i class="fas fa-times-circle" style="color:#e74c3c;"></i>
+        <h1>پرداخت انجام نشد</h1>
+        <p>پرداخت لغو شد یا با خطا مواجه شد. سبد خرید شما دست‌نخورده باقی مانده است.</p>
+    {% endif %}
+
+    <a href="{% url 'home:home' %}" class="btn">بازگشت به صفحه اصلی</a>
+</section>
+
+{% endblock %}

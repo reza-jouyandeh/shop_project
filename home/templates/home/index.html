@@ -1,0 +1,649 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block main %}
+
+
+
+<!-- home section starts  -->
+
+<section class="home" id="home">
+
+    <div class="row">
+
+        <div class="content">
+            <h3>تا 100٪ تخفیف</h3>
+            <p>این سایت جهت نمونه پروژه ساخته شده و برای رزومه بنده است و هیچ جنبه دیگری غیر از این ندارد و هیچ کتابی به فروش نمیرسد.
+             منبع کد های HTML و CSS نوشته شده این سایت در آخر سایت قابل مشاهده است. </p>
+            <a href="{% url 'start_reading' %}" class="btn">برای خرید کتاب کلیک کنید</a>
+{#            href="{% url 'account:user_register' %}"#}
+        </div>
+
+        <div class="swiper books-slider">
+            <div class="swiper-wrapper">
+                <a href="#" class="swiper-slide"><img src="{% static "image/ghanon.jpg" %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static "image/bashgah.webp" %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static "image/adat.webp" %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static "image/ashegh.jpg" %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static "image/ester.jpg" %}" alt=""></a>
+                <a href="#" class="swiper-slide"><img src="{% static "image/negaresh.jpg" %}" alt=""></a>
+            </div>
+            <img src="{% static "image/stand.png" %}" class="stand" alt="">
+        </div>
+
+    </div>
+
+</section>
+
+<!-- home section ense  -->
+
+<!-- icons section starts  -->
+
+<section class="icons-container">
+
+    <div class="icons">
+        <i class="fas fa-shipping-fast"></i>
+        <div class="content">
+            <h3>ارسال رایگان</h3>
+            <p>سفارش بالای 100 هزار تومان</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-lock"></i>
+        <div class="content">
+            <h3>پرداخت امن</h3>
+            <p>100 پرداخت مطمئن</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-redo-alt"></i>
+        <div class="content">
+            <h3>بازگشت آسان</h3>
+            <p>10 روز مهلت بازگشت</p>
+        </div>
+    </div>
+
+    <div class="icons">
+        <i class="fas fa-headset"></i>
+        <div class="content">
+            <h3>پشتیبانی 7/24</h3>
+            <p>در هر زمان با ما تماس بگیرید</p>
+        </div>
+    </div>
+
+</section>
+
+<!-- icons section ends -->
+
+<!-- featured section starts  -->
+
+<section class="featured" id="featured">
+
+    <h1 class="heading"> <span>کتاب ها</span> </h1>
+
+    <div class="swiper featured-slider">
+
+        <div class="swiper-wrapper">
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/ghanon.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب 48 قانون قدرت</h3>
+                    <div class="price">374 هزار تومان <span>400 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/ester.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب بخواهید تا به شما داده شود</h3>
+                    <div class="price">153 هزار تومان <span>179 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/adat.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب خرده عادت ها</h3>
+                    <div class="price">145 هزار تومان <span>170 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/ashegh.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب اول عاشق خودت باش</h3>
+                    <div class="price">106 هزار تومان <span>119 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/bashgah.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب باشگاه پنج صبحی ها</h3>
+                    <div class="price">170 هزار تومان <span>200 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide box">
+                <div class="icons">
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="{% static "image/negaresh.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب نگرش رهبران بزرگ</h3>
+                    <div class="price">120 هزار تومان <span>149 هزارتومان</span></div>
+                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>
+                </div>
+            </div>
+
+{#            <div class="swiper-slide box">#}
+{#                <div class="icons">#}
+{#                    <a href="#" class="fas fa-search"></a>#}
+{#                    <a href="#" class="fas fa-heart"></a>#}
+{#                    <a href="#" class="fas fa-eye"></a>#}
+{#                </div>#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/book-7.png" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>کتاب برجسته</h3>#}
+{#                    <div class="price">5 هزار تومان <span>10 هزارتومان</span></div>#}
+{#                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="icons">#}
+{#                    <a href="#" class="fas fa-search"></a>#}
+{#                    <a href="#" class="fas fa-heart"></a>#}
+{#                    <a href="#" class="fas fa-eye"></a>#}
+{#                </div>#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/book-8.png" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>کتاب برجسته</h3>#}
+{#                    <div class="price">5 هزار تومان <span>10 هزارتومان</span></div>#}
+{#                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="icons">#}
+{#                    <a href="#" class="fas fa-search"></a>#}
+{#                    <a href="#" class="fas fa-heart"></a>#}
+{#                    <a href="#" class="fas fa-eye"></a>#}
+{#                </div>#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/book-9.png" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>کتاب برجسته</h3>#}
+{#                    <div class="price">5 هزار تومان <span>10 هزارتومان</span></div>#}
+{#                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="icons">#}
+{#                    <a href="#" class="fas fa-search"></a>#}
+{#                    <a href="#" class="fas fa-heart"></a>#}
+{#                    <a href="#" class="fas fa-eye"></a>#}
+{#                </div>#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/book-10.png" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>کتاب برجسته</h3>#}
+{#                    <div class="price">5 هزار تومان <span>10 هزارتومان</span></div>#}
+{#                    <a href="#" class="btn">اضافه کردن به سبد خرید</a>#}
+{#                </div>#}
+{#            </div>#}
+
+        </div>
+
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+
+    </div>
+
+</section>
+
+<!-- featured section ends -->
+
+<!-- newsletter section starts -->
+
+<section class="newsletter">
+</section>
+
+<!-- newsletter section ends -->
+
+<!-- arrivals section starts  -->
+
+<section class="arrivals" id="arrivals">
+
+    <h1 class="heading"> <span>کتاب های جدید</span> </h1>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/ghanon.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب 48 قانون قدرت</h3>
+                    <div class="price">374 هزارتومان <span>400 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/ester.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب بخواهید تا به شما داده شود</h3>
+                    <div class="price">153 هزارتومان <span>179 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/adat.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب خرده عادت ها</h3>
+                    <div class="price">145 هزارتومان <span>170 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/ashegh.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب اول عاشق خودت باش!</h3>
+                    <div class="price">106 هزارتومان <span>119 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/bashgah.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب باشگاه پنج صبحی ها</h3>
+                    <div class="price">170 هزارتومان <span>200 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+    <div class="swiper arrivals-slider">
+
+        <div class="swiper-wrapper">
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/negaresh.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب نگرش رهبران بزرگ</h3>
+                    <div class="price">120 هزارتومان <span>149 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/bashgah.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب باشگاه پنج صبحی ها</h3>
+                    <div class="price">170 هزارتومان <span>200 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/adat.webp" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب خرده عادت ها</h3>
+                    <div class="price">145 هزارتومان <span>170 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/ashegh.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب اول عاشق خودت باش!</h3>
+                    <div class="price">106 هزارتومان <span>119 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+            <a href="#" class="swiper-slide box">
+                <div class="image">
+                    <img src="{% static "image/ghanon.jpg" %}" alt="">
+                </div>
+                <div class="content">
+                    <h3>کتاب 48 قانون قدرت</h3>
+                    <div class="price">374 هزارتومان <span>400 هزارتومان</span></div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- arrivals section ends -->
+
+<!-- deal section starts  -->
+
+<section class="deal">
+
+    <div class="content">
+        <h3>معامله روز</h3>
+        <h1>تا 100٪ تخفیف</h1>
+        <a href="{% url 'cart:cart_detail' %}" class="btn">اکنون خرید کنید</a>
+    </div>
+
+    <div class="image">
+        <img src="{% static "image/deal-img.jpg" %}" alt="">
+    </div>
+
+</section>
+
+<!-- deal section ends -->
+
+<!-- reviews section starts  -->
+
+{#<section class="reviews" id="reviews">#}
+{##}
+{#    <h1 class="heading"> <span>نظرات مشتریان</span> </h1>#}
+{##}
+{#    <div class="swiper reviews-slider">#}
+{##}
+{#        <div class="swiper-wrapper">#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-1.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-2.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-3.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-4.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-5.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <img src="{% static "image/pic-6.png" %}" alt="">#}
+{#                <h3>نام مشتری</h3>#}
+{#                <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است </p>#}
+{#                <div class="stars">#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star"></i>#}
+{#                    <i class="fas fa-star-half-alt"></i>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+{##}
+{#</section>#}
+
+<!-- reviews section ends -->
+
+<!-- blogs section starts  -->
+
+{#<section class="blogs" id="blogs">#}
+{##}
+{#    <h1 class="heading"> <span>وبلاگ</span> </h1>#}
+{##}
+{#    <div class="swiper blogs-slider">#}
+{##}
+{#        <div class="swiper-wrapper">#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/blog-1.jpg" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>عنوان متن در اینجا</h3>#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>#}
+{#                    <a href="#" class="btn">مطالعه بیشتر</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/blog-2.jpg" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>عنوان متن در اینجا</h3>#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>#}
+{#                    <a href="#" class="btn">مطالعه بیشتر</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/blog-3.jpg" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>عنوان متن در اینجا</h3>#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>#}
+{#                    <a href="#" class="btn">مطالعه بیشتر</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/blog-4.jpg" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>عنوان متن در اینجا</h3>#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>#}
+{#                    <a href="#" class="btn">مطالعه بیشتر</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#            <div class="swiper-slide box">#}
+{#                <div class="image">#}
+{#                    <img src="{% static "image/blog-5.jpg" %}" alt="">#}
+{#                </div>#}
+{#                <div class="content">#}
+{#                    <h3>عنوان متن در اینجا</h3>#}
+{#                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است </p>#}
+{#                    <a href="#" class="btn">مطالعه بیشتر</a>#}
+{#                </div>#}
+{#            </div>#}
+{##}
+{#        </div>#}
+{##}
+{#    </div>#}
+{##}
+{#</section>#}
+
+<!-- blogs section ends -->
+
+{% endblock %}

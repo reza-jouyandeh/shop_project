@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html dir="rtl" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قالب فروشگاه آنلاین کتاب | نت کپی </title>
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- custom css file link  -->
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
+
+</head>
+<body>
+
+<!-- header section starts  -->
+
+<header class="header">
+
+    <div class="header-1">
+
+        <a href="{% url 'home:home' %}" class="logo"> <i class="fas fa-book"></i> کتابخانه </a>
+
+        <form action="" class="search-form">
+            <input type="search" name="" placeholder="جستجو کنید" id="search-box">
+            <label for="search-box" class="fas fa-search"></label>
+        </form>
+
+        <div class="icons">
+            <div id="search-btn" class="fas fa-search"></div>
+            <a href="{% url 'cart:cart_detail' %}" class="fas fa-shopping-cart cart-icon">
+                {% if cart|length > 0 %}<span class="cart-count">{{ cart|length }}</span>{% endif %}
+            </a>
+            <div id="login-btn" class="fas fa-user"></div>
+        </div>
+
+    </div>
+
+    <div class="header-2">
+        <nav class="navbar">
+            <a href="{% url 'home:home' %}">خانه</a>
+            <a href="{% url 'home:home' %}#featured">ویژه</a>
+            <a href="{% url 'home:home' %}#arrivals">جدیدها</a>
+        </nav>
+    </div>
+
+</header>
+
+<!-- header section ends -->
+
+<!-- bottom navbar  -->
+
+<nav class="bottom-navbar">
+    <a href="{% url 'home:home' %}" class="fas fa-home"></a>
+    <a href="{% url 'home:home' %}#featured" class="fas fa-list"></a>
+    <a href="{% url 'home:home' %}#arrivals" class="fas fa-tags"></a>
+    <a href="{% url 'home:home' %}#reviews" class="fas fa-comments"></a>
+    <a href="{% url 'home:home' %}#blogs" class="fas fa-blog"></a>
+</nav>
+
+<!-- login form  -->
+
+<div class="login-form-container">
+
+    <div id="close-login-btn" class="fas fa-times">
+        <br>
+        {% if request.user.is_authenticated %}
+            <a href="#" class="btn">پروفایل</a>
+            <br>
+            <a href="{% url 'account:user_logout' %}" class="btn">خارج شدن</a>
+        {% else %}
+            <a href="{% url 'account:user_register' %}" class="btn">ثبت نام</a>
+            <a href="{% url 'account:user_login' %}" class="btn">ورود</a>
+
+        {% endif %}
+    </div>
+{#    <div class="btn-group">#}
+{#        <button type="button" class="btn btn-sm btn-light dropdown-toggle" data-toggle="dropdown">My Account</button>#}
+{#        <div class="dropdown-menu dropdown-menu-right">#}
+{#            <button class="dropdown-item" type="button">Sign in</button>#}
+{#            <button class="dropdown-item" type="button">Sign up</button>#}
+{#        </div>#}
+{#    </div>#}
+{#    <form action="">#}
+{#        <h3>ورود</h3>#}
+{#        <span>نام کاربری</span>#}
+{#        <input type="email" name="" class="box" placeholder="ایمیل خود را وارد کنید" id="">#}
+{#        <span>رمز عبور</span>#}
+{#        <input type="password" name="" class="box" placeholder="رمز عبور خود را وارد کنید" id="">#}
+{#        <div class="checkbox">#}
+{#            <input type="checkbox" name="" id="remember-me">#}
+{#            <label for="remember-me"> به خاطر سپردن</label>#}
+{#        </div>#}
+{#        <input type="submit" value="sign in" class="btn">#}
+{#        <p>رمز خود را فراموش کرده اید ؟ <a href="#">اینجا کلیک کنید</a></p>#}
+{#        <p>ثبت نام نکرده اید ؟ <a href="#">ساخت حساب</a></p>#}
+{#    </form>#}
+
+</div>
+
+
+{% if messages %}
+    <div class="messages-container">
+        {% for message in messages %}
+            <div class="site-message {{ message.tags }}">{{ message }}</div>
+        {% endfor %}
+    </div>
+{% endif %}
+
+{% block main %}
+
+{% endblock %}
+
+
+<!-- footer section starts  -->
+
+<section class="footer">
+
+    <div class="box-container">
+
+        <div class="box">
+            <h3>دیگر شعبه ها</h3>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> تهران </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> مشهد </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> اصفهان </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> شیراز </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> تبریز </a>
+            <a href="#"> <i class="fas fa-map-marker-alt"></i> یزد </a>
+        </div>
+
+        <div class="box">
+            <h3>quick links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> خانه </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> ویژه </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> برجسته </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> نظرات </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> وبلاگ </a>
+        </div>
+
+        <div class="box">
+            <h3>extra links</h3>
+            <a href="#"> <i class="fas fa-arrow-right"></i> حساب کاربری </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> اقلام سفارش داده شده </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> قوانین </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> روش پرداخت </a>
+            <a href="#"> <i class="fas fa-arrow-right"></i> دیگر سرویس ها </a>
+        </div>
+
+        <div class="box">
+            <h3>contact info</h3>
+            <img src="{% static "image/worldmap.png" %}" class="map" alt="">
+        </div>
+
+    </div>
+
+    <div class="share">
+        <a href="#" class="fab fa-facebook-f"></a>
+        <a href="#" class="fab fa-twitter"></a>
+        <a href="#" class="fab fa-instagram"></a>
+        <a href="#" class="fab fa-linkedin"></a>
+        <a href="#" class="fab fa-pinterest"></a>
+    </div>
+
+    <div class="credit"> فارسی و راست چین شده توسط <a href="https://netcopy.ir"><span>نت کپی</span></a> </div>
+
+</section>
+
+<!-- footer section ends -->
+
+<!-- loader  -->
+
+<div class="loader-container">
+    <img src="{% static "image/loader-img.gif" %}" alt="">
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link  -->
+<script src="{% static "js/script.js" %}"></script>
+
+</body>
+</html>

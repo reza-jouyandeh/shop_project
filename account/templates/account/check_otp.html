@@ -1,0 +1,44 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قالب html صفحه ورود و ثبت نام </title>
+    <link rel="stylesheet" href="{% static "acca/style.css" %}" type="text/css">
+</head>
+<body>
+    <div class="container right-panel-active">
+        <!-- Sign In -->
+        <div class="container__form container--signin">
+            <form method="post" action="#" class="form" id="form2">
+                {% csrf_token %}
+                <h2 class="form__title">checkotp</h2>
+                    {% for error in form.non_field_errors %}
+                        <p class="alert alert-danger">{{ error }}</p>
+                    {% endfor %}
+                    {{ form.code }}
+{#                <input type="email" placeholder="شماره تلفن" class="input" />#}
+{#                <input type="password" placeholder="رمز عبور" class="input" />#}
+                <a href="#" class="link">فراموشی رمز عبور؟</a>
+                <button class="btn">checkotp</button>
+            </form>
+        </div>
+
+        <!-- Overlay -->
+        <div class="container__overlay">
+            <div class="overlay">
+                <div class="overlay__panel overlay--left">
+                    <button class="btn" id="signIn">ورود</button>
+                </div>
+                <div class="overlay__panel overlay--right">
+                    <button class="btn" id="signUp">ثبت نام</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static "acca/script.js" %}"></script>
+</body>
+</html>
